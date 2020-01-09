@@ -1,0 +1,11 @@
+﻿@model SearchModel
+
+<div>
+    @foreach (var link in Model.Results)
+    {
+        <p>@link.Key</p>
+    }
+</div>
+<form asp-controller="Home" asp-action="Save">
+    <input type="submit" value="Сохранить">
+</form>

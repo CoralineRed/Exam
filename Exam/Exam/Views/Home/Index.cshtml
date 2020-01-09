@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h3>Сканирование</h3>
+    <form asp-controller="Home" asp-action="Search">
+        <p>URL</p>
+        <input type="text" value="" name="url" placeholder="Введите URL">
+        <br />
+        <p>Глубина</p>
+        <input type="number" value="" name="depth" />
+        <br />
+        <input type="submit" value="Искать">
+    </form>
+
+<h3>Результаты поиска</h3>
+    <form asp-controller="Home" asp-action="ShowResults">
+        <p>Domain</p>
+        <input type="text" value="" name="domain" />
+        <br />
+        <input type="submit" value="Смотреть">
+    </form>

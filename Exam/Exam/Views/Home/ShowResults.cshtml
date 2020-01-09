@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "ShowResults";
+}
+
+@if (Model.Count == 0)
+{
+    <h3>Сохраненных результатов по этому домену нет</h3>
+}
+else
+{
+<table>
+    <tr>
+        <td>URL</td>
+        <td>Страница</td>
+    </tr>
+    @foreach (var link in Model)
+    {
+        <tr>
+            <td>@link.Key</td>
+            <td>@link.Value</td>
+        </tr>
+    }
+</table>
+}
+
